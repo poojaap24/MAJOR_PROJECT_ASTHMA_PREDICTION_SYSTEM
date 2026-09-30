@@ -1,0 +1,213 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-safe: var(--safe);
+  --color-safe-soft: var(--safe-soft);
+  --color-moderate: var(--moderate);
+  --color-moderate-soft: var(--moderate-soft);
+  --color-high: var(--high);
+  --color-high-soft: var(--high-soft);
+  --color-severe: var(--severe);
+  --color-severe-soft: var(--severe-soft);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.985 0.002 250);
+  --foreground: oklch(0.26 0.015 260);
+  --surface: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.015 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.015 260);
+  --primary: oklch(0.72 0.16 55);
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.965 0.005 250);
+  --secondary-foreground: oklch(0.3 0.015 260);
+  --muted: oklch(0.965 0.005 250);
+  --muted-foreground: oklch(0.55 0.015 258);
+  --accent: oklch(0.955 0.02 60);
+  --accent-foreground: oklch(0.35 0.06 50);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.003 250);
+  --border: oklch(0.915 0.006 255);
+  --input: oklch(0.915 0.006 255);
+  --ring: oklch(0.72 0.16 55);
+
+  --safe: oklch(0.63 0.16 152);
+  --safe-soft: oklch(0.95 0.045 152);
+  --moderate: oklch(0.78 0.15 88);
+  --moderate-soft: oklch(0.96 0.06 92);
+  --high: oklch(0.68 0.18 45);
+  --high-soft: oklch(0.95 0.05 55);
+  --severe: oklch(0.58 0.22 27);
+  --severe-soft: oklch(0.95 0.04 25);
+
+  --chart-1: oklch(0.72 0.16 55);
+  --chart-2: oklch(0.63 0.16 152);
+  --chart-3: oklch(0.6 0.12 240);
+  --chart-4: oklch(0.78 0.15 88);
+  --chart-5: oklch(0.58 0.22 27);
+
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.32 0.015 260);
+  --sidebar-primary: oklch(0.72 0.16 55);
+  --sidebar-primary-foreground: oklch(0.99 0.005 80);
+  --sidebar-accent: oklch(0.965 0.02 60);
+  --sidebar-accent-foreground: oklch(0.35 0.06 50);
+  --sidebar-border: oklch(0.925 0.006 255);
+  --sidebar-ring: oklch(0.72 0.16 55);
+
+  --gradient-sunset: linear-gradient(100deg, #f5a623 0%, #ff6b4a 100%);
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px -12px rgba(16, 24, 40, 0.14);
+  --shadow-float: 0 24px 60px -20px rgba(16, 24, 40, 0.32);
+}
+
+.dark {
+  --background: oklch(0.2 0.015 260);
+  --foreground: oklch(0.97 0.003 250);
+  --surface: oklch(0.24 0.015 260);
+  --card: oklch(0.24 0.015 260);
+  --card-foreground: oklch(0.97 0.003 250);
+  --popover: oklch(0.24 0.015 260);
+  --popover-foreground: oklch(0.97 0.003 250);
+  --secondary: oklch(0.28 0.015 260);
+  --secondary-foreground: oklch(0.97 0.003 250);
+  --muted: oklch(0.28 0.015 260);
+  --muted-foreground: oklch(0.72 0.012 258);
+  --accent: oklch(0.3 0.03 60);
+  --accent-foreground: oklch(0.95 0.02 70);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --sidebar: oklch(0.24 0.015 260);
+  --sidebar-foreground: oklch(0.95 0.003 250);
+  --sidebar-border: oklch(1 0 0 / 12%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility bg-sunset {
+  background-image: var(--gradient-sunset);
+}
+
+@utility text-sunset {
+  background-image: var(--gradient-sunset);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-float {
+  box-shadow: var(--shadow-float);
+}
+
+@utility glass-card {
+  background-color: color-mix(in oklab, white 82%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--shadow-float);
+}
+
+@utility enter-up {
+  animation: enter-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-flow-dot {
+  animation: flow-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes flow-dot {
+  0% {
+    top: -4px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}

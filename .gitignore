@@ -1,0 +1,11 @@
+venv/
+node_modules/
+__pycache__/
+*.pyc
+.envauth.db 
+auth.db-shm 
+auth.db-wal 
+auth.db 
+auth.db-shm 
+auth.db-wal 
+.env 

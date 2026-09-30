@@ -1,0 +1,36 @@
+{
+  "name": "python_aqi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Readingsbuffer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poojaap24/ASTHMA-RISK-PREDICTION-Majorproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poojaap24/ASTHMA-RISK-PREDICTION-Majorproject/issues"
+  },
+  "homepage": "https://github.com/poojaap24/ASTHMA-RISK-PREDICTION-Majorproject#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.2.0",
+    "groq-sdk": "^0.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "same_city_test": {
+        "MAE": 3.4579505781382145,
+        "MSE": 97.78424539478434,
+        "RMSE": 9.888591679040264,
+        "R2": 0.9768866185738376
+    },
+    "unseen_city_test": {
+        "MAE": 4.313693021953279,
+        "MSE": 423.9707559565226,
+        "RMSE": 20.590550161579525,
+        "R2": 0.7716369505916059
+    },
+    "epochs_run": 33,
+    "note": "Model predicts DELTA (change from last known PM2.5), not the absolute value. PredictService.py must add the last known reading's raw pm25 back to the model's output."
+}
